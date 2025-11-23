@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>منوی آنلاین - کافه</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>کافه نمونه — منوی آنلاین</h1>
+      <p class="tagline">فهرست نوشیدنی‌ها — لمس کنید تا سفارش دهید</p>
+      <div class="controls">
+        <input id="search" placeholder="جستجو در منو..." aria-label="search" />
+        <select id="categoryFilter" aria-label="category">
+          <option value="all">همه</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="menu"></section>
+
+    <aside class="order-card" id="orderCard">
+      <h2>سبد سفارش</h2>
+      <ul id="orderList"></ul>
+      <div class="total">
+        <span>تعداد:</span><strong id="orderCount">0</strong>
+      </div>
+      <button id="checkoutBtn" class="primary">ارسال سفارش (نمونه)</button>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>تماس و سفارش: <a href="https://wa.me/000000000000" target="_blank" rel="noopener">واتساپ</a>  •  تحویل و پرداخت در محل</p>
+      <p class="muted">این سایت نمونه‌ای است — می‌توانم برای شما نسخه‌ی قابل میزبانی بسازم.</p>
+    </div>
+  </footer>
+
+  <template id="categoryTpl">
+    <section class="category">
+      <h3 class="category-title"></h3>
+      <ul class="items"></ul>
+    </section>
+  </template>
+
+  <template id="itemTpl">
+    <li class="menu-item">
+      <div class="item-main">
+        <strong class="item-name"></strong>
+        <span class="item-desc"></span>
+      </div>
+      <div class="item-actions">
+        <button class="add-btn">افزودن</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
